@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: rhdh-with-sso
+
+resources:
+- Namespace_rhdh-with-sso.yml
+- ServiceAccount_rhdh.yml
+- Secret_rhdh.yml
+- ConfigMap_app-config-rhdh.yml
+- ConfigMap_rhdh-runtime-config.yml
+- ConfigMap_rhdh-rbac-policy.yml
+- Backstage_rhdh-with-sso.yml

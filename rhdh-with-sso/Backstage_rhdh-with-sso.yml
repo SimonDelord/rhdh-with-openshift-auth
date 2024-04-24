@@ -1,0 +1,22 @@
+apiVersion: rhdh.redhat.com/v1alpha1
+kind: Backstage
+metadata:
+  name: rhdh-with-sso
+spec:
+  application:
+    appConfig:
+      configMaps:
+      - name: app-config-rhdh
+      mountPath: /opt/app-root/src
+    extraEnvs:
+      envs:
+      - name: OAUTH_USER_HEADER
+        value: x-forwarded-user
+      secrets:
+      - name: rhdh
+    extraFiles:
+      mountPath: /opt/app-root/src
+    image: quay.io/janus-idp/backstage-showcase:next
+    replicas: 1
+  rawRuntimeConfig:
+    backstageConfig: rhdh-runtime-config
