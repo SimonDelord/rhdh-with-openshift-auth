@@ -2,7 +2,7 @@
 
 Configures Red Hat Developer Hub to integrate with OpenShift authentication.
 
-This is the work of @sabre1041 turned into kustomize.
+This is the work of [@sabre1041](https://github.com/sabre1041) turned into kustomize.
 
 ## Caviates
 
