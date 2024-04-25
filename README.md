@@ -20,4 +20,8 @@ This is the work of [@sabre1041](https://github.com/sabre1041) turned into kusto
    ```
 3. update kustomize/rhdh-with-openshift-auth/kustomization.yaml patches with the correct url for your cluster
 4. ...
-5. ...
+5. deploy RHDH with OpenShift Auth
+   ```sh
+   oc apply -k kustomization/rhdh-with-openshift-auth`
+   ```
+6. ...
