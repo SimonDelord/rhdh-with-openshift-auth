@@ -1,7 +1,8 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: dynamic-plugins-rhdh
+  # NOTE: this follows the pattern <backstage-cr-name>-dynamic-plugins, so if you change the backstage-cr name this needs to change too (to bad not using helm)
+  name: rhdh-with-openshift-auth-dynamic-plugins
 data:
   dynamic-plugins.yaml: |
     includes:

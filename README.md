@@ -10,6 +10,9 @@ This is the work of [@sabre1041](https://github.com/sabre1041) turned into kusto
 2. it does not properly handle secret information
 3. it doesn't handle the url for oauth in a convienet way so its not very re-useable
 4. it only works with the yet to be released RHDH operator v1.1.2 or using the latest midstream janus
+5. it dangerously turns on `dangerouslyDisableDefaultAuthPolicy: true` due to
+   * https://github.com/backstage/backstage/issues/23760
+   * https://issues.redhat.com/browse/RHIDP-2044
 
 ## Instructions
 

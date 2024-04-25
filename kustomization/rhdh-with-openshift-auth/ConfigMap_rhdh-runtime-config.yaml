@@ -124,7 +124,7 @@ data:
                   name: rhdh-tls
             - name: backstage-backend
               # image will be replaced by the value of the `RELATED_IMAGE_backstage` env var, if set
-              image: quay.io/janus-idp/backstage-showcase:latest
+              image: quay.io/janus-idp/backstage-showcase:next
               imagePullPolicy: IfNotPresent
               args:
                 - "--config"
