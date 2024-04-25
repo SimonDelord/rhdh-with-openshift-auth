@@ -11,6 +11,7 @@ resources:
 - ConfigMap_app-config-rhdh.yaml
 - ConfigMap_rhdh-runtime-config.yaml
 - ConfigMap_rhdh-rbac-policy.yaml
+- ConfigMap_dynamic-plugins-rhdh.yaml
 - Backstage.yaml
 
 patchesJSON6902:
