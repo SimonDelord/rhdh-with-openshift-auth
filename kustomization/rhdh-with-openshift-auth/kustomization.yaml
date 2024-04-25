@@ -2,16 +2,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: rhdh-with-sso
+namespace: rhdh-with-openshift-auth
 
 resources:
-- Namespace_rhdh-with-sso.yaml
+- Namespace.yaml
 - ServiceAccount_rhdh.yaml
 - Secret_rhdh.yaml
 - ConfigMap_app-config-rhdh.yaml
 - ConfigMap_rhdh-runtime-config.yaml
 - ConfigMap_rhdh-rbac-policy.yaml
-- Backstage_rhdh-with-sso.yaml
+- Backstage.yaml
 
 patchesJSON6902:
 - target:
@@ -20,4 +20,4 @@ patchesJSON6902:
   patch: |-
     - op: replace
       path: "/metadata/annotations/serviceaccounts.openshift.io~1oauth-redirecturi.backstage"
-      value: "https://backstage-rhdh-with-sso-rhdh-with-sso.apps.cluster-4z5xw.dynamic.redhatworkshops.io"
+      value: "https://backstage-rhdh-with-openshift-auth-rhdh-with-openshift-auth.apps.cluster-4z5xw.dynamic.redhatworkshops.io"
