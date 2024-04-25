@@ -12,3 +12,12 @@ resources:
 - ConfigMap_rhdh-runtime-config.yml
 - ConfigMap_rhdh-rbac-policy.yml
 - Backstage_rhdh-with-sso.yml
+
+patchesJSON6902:
+- target:
+    kind: ServiceAccount
+    name: rhdh
+  patch: |-
+    - op: replace
+      path: "/metadata/annotations/serviceaccounts.openshift.io~1oauth-redirecturi.backstage"
+      value: "https://backstage-rhdh-with-sso-rhdh-with-sso.apps.cluster-4z5xw.dynamic.redhatworkshops.io"

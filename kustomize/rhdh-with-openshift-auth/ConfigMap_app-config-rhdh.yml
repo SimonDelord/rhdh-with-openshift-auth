@@ -13,6 +13,12 @@ data:
    auth:
     keys:
      - secret: ${BACKEND_SECRET}
+  catalog:
+    locations:
+    - target: https://github.com/janus-idp/backstage-showcase/blob/main/catalog-entities/all.yaml
+      type: url
+    - target: https://github.com/janus-idp/software-templates/blob/main/showcase-templates.yaml
+      type: url
   permission:
     enabled: true
     rbac:

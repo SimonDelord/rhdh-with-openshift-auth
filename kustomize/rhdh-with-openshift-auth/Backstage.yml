@@ -1,7 +1,7 @@
 apiVersion: rhdh.redhat.com/v1alpha1
 kind: Backstage
 metadata:
-  name: rhdh-with-sso
+  name: rhdh-with-openshift-auth
 spec:
   application:
     appConfig:
