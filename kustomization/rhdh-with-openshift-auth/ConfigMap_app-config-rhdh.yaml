@@ -31,11 +31,7 @@ data:
   permission:
     enabled: true
     rbac:
+      policies-csv-file: /opt/app-root/src/rbac-policy.csv
       admin:
-        users:
-        - name: user:default/user1
-        - name: user:default/user1@cluster.local
-        - name: user:user1
-        - name: user:user1@cluster.local
-        - name: user1
-        - name: user1@cluster.local
+        superUsers:
+        - name: user:default/admin

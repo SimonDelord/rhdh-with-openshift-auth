@@ -164,7 +164,8 @@ data:
                 - mountPath: /opt/app-root/src/dynamic-plugins-root
                   name: dynamic-plugins-root
                 - name: rbac-policy
-                  mountPath: opt/app-root/src/rbac
+                  mountPath: /opt/app-root/src/rbac-policy.csv
+                  subPath: rbac-policy.csv
               resources:
                 limits:
                   cpu: 1000m
