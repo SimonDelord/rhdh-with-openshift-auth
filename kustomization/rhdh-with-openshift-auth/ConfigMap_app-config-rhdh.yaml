@@ -14,6 +14,11 @@ data:
     keys:
      - secret: ${BACKEND_SECRET}
   catalog:
+    import:
+      entityFilename: catalog-info.yaml
+      pullRequestBranchName: backstage-integration
+    rules:
+    - allow: [Component, System, Group, Resource, Location, Template, API, User]
     locations:
     - target: https://github.com/janus-idp/backstage-showcase/blob/main/catalog-entities/all.yaml
       type: url

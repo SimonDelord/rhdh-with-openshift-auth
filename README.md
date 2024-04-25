@@ -16,7 +16,7 @@ This is the work of [@sabre1041](https://github.com/sabre1041) turned into kusto
 1. install RHDH operator
 2. if v1.1.2 or later is not available yet, patch to use Janus
    ```sh
-   oc get ClusterServiceVersion rhdh-operator.v1.1.1 -o json | jq '(.spec.install.spec.deployments[] | select(.name == "rhdh-operator").spec.template.spec.containers[] | select(.name == "manager")).image = "quay.io/janus-idp/operator:latest"' | oc apply -f -
+   oc get ClusterServiceVersion rhdh-operator.v1.1.1 -o json --namespace rhdh-operator | jq '(.spec.install.spec.deployments[] | select(.name == "rhdh-operator").spec.template.spec.containers[] | select(.name == "manager")).image = "quay.io/janus-idp/operator:latest"' | oc apply -f - --namespace rhdh-operator
    ```
 3. update kustomize/rhdh-with-openshift-auth/kustomization.yaml patches with the correct url for your cluster
 4. ...
