@@ -72,6 +72,7 @@ data:
             - name: rbac-policy
               configMap:
                 name: rhdh-rbac-policy
+                defaultMode: 420
           initContainers:
             - command:
                 - ./install-dynamic-plugins.sh

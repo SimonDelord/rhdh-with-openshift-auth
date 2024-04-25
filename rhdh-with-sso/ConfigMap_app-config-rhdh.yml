@@ -19,7 +19,7 @@ data:
       policies-csv-file: ./rbac/rbac-policy.csv
       admin:
         users:
-        - name: user:admin
-        - name: user:default/admin
-        - name: user:user1
-        - name: user:default/user1
+        - name: 'user:admin'
+        - name: 'user:default/admin'
+        - name: 'user:user1'
+        - name: 'user:default/user1'
