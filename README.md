@@ -11,9 +11,13 @@ This is the work of [@sabre1041](https://github.com/sabre1041) turned into kusto
 3. it doesn't handle the url for oauth in a convienet way so its not very re-useable
 4. it only works with the yet to be released RHDH operator v1.1.2 or using the latest midstream janus
 
-## Patching RHDH v1.1.1 to use Janus
-While we wait for RHDH operator v1.1.2 to come out that has fixes needed for all this to work, you can patch RHDH operator v1.1.1 to use the janus image:
+## Instructions
 
+1. install RHDH operator
+2. if v1.1.2 or later is not available yet, patch to use Janus
 ```sh
 oc get ClusterServiceVersion rhdh-operator.v1.1.1 -o json | jq '(.spec.install.spec.deployments[] | select(.name == "rhdh-operator").spec.template.spec.containers[] | select(.name == "manager")).image = "quay.io/janus-idp/operator:latest"' | oc apply -f -
 ```
+3. update kustomize/rhdh-with-openshift-auth/kustomization.yaml patches with the correct url for your cluster
+4. ...
+5. ...

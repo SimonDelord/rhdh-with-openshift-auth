@@ -19,6 +19,8 @@ data:
       type: url
     - target: https://github.com/janus-idp/software-templates/blob/main/showcase-templates.yaml
       type: url
+    - target: https://github.com/itewk/rhdh-with-openshift-auth/blob/main/catalog-entities/users/user1.yml
+      type: url
   permission:
     enabled: true
     rbac:

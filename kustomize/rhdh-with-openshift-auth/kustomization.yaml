@@ -5,13 +5,13 @@ kind: Kustomization
 namespace: rhdh-with-sso
 
 resources:
-- Namespace_rhdh-with-sso.yml
-- ServiceAccount_rhdh.yml
-- Secret_rhdh.yml
-- ConfigMap_app-config-rhdh.yml
-- ConfigMap_rhdh-runtime-config.yml
-- ConfigMap_rhdh-rbac-policy.yml
-- Backstage_rhdh-with-sso.yml
+- Namespace_rhdh-with-sso.yaml
+- ServiceAccount_rhdh.yaml
+- Secret_rhdh.yaml
+- ConfigMap_app-config-rhdh.yaml
+- ConfigMap_rhdh-runtime-config.yaml
+- ConfigMap_rhdh-rbac-policy.yaml
+- Backstage_rhdh-with-sso.yaml
 
 patchesJSON6902:
 - target:
