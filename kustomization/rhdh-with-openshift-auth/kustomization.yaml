@@ -21,4 +21,6 @@ patchesJSON6902:
   patch: |-
     - op: replace
       path: "/metadata/annotations/serviceaccounts.openshift.io~1oauth-redirecturi.backstage"
-      value: "https://backstage-rhdh-with-openshift-auth-rhdh-with-openshift-auth.apps.cluster-4z5xw.dynamic.redhatworkshops.io"
+      value: "https://backstage-rhdh-with-openshift-auth-rhdh-with-openshift-auth.apps.h28yrboo.eastasia.aroapp.io"
+#     https://backstage-developer-hub-rhdh-operator.apps.h28yrboo.eastasia.aroapp.io/
+#     value: "https://backstage-rhdh-with-openshift-auth-rhdh-with-openshift-auth.apps.cluster-4z5xw.dynamic.redhatworkshops.io"
